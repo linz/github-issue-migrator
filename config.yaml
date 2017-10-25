@@ -1,0 +1,12 @@
+---
+Connection:
+  access_token: ''
+
+Repo: 
+  from_owner: 'linz' 
+  from_repo: 'li-tasks'
+  to_owner: 'linz'
+  to_repo: 'ds-dev-team'
+
+Issues:
+  issues: [125]
