@@ -126,19 +126,20 @@ class ApiInterface (object):
         # set when creating issue  - but this is failing
         r = requests.post('{0}/assignees?access_token={1}'
                           .format(issue_url, self.token), json.dumps(payload))
-        return r
+        return r.json()
     
     
     def create_comment(self, issue_url, payload):
         r = requests.post('{0}/comments?access_token={1}'
                             .format(issue_url, self.token), json.dumps(payload))
+        return r.json()
     
     def close_issue(self, issue_num):
         payload = {"state": "closed"}                
         r = requests.post('https://api.github.com/repos/{0}/{1}/issues/{2}?access_token={3}'
                          .format(self.from_owner, self.from_repo, issue_num, self.token), 
                          json.dumps(payload))    
-        return r
+        return r.json()
 
 def main(): 
     
