@@ -1,8 +1,8 @@
 # github-issue-migrator
-Copy Github Issues and comments from one repo to another
+Copy GitHub issues and comments from one repository to another
 
 
-By adding the configuration parameters to the configuration .yaml the issues migration script will read all issues and comments from one repository and  write the issues to a new repository. Once the script has migrated the issues it will link the old issues to the new issue and close the old issue. 
+By adding the configuration parameters to the configuration .yaml the issues migration script will read all issues and comments from one repository and  write the issues to a new repository. Once the script has migrated the issues it will link the old issues to the new issues while closing the old issues. 
 
 What is migrated:
 * Issues
@@ -15,8 +15,6 @@ Not currently migrated by the script:
 * Mile stones
 
 
- ![**Example of the new issues created**](images/example.png)
-
 ## Usage
 
 The script takes one argument. The argument being the path to the configuration file
@@ -26,7 +24,7 @@ The script takes one argument. The argument being the path to the configuration 
 ## Config
 
 See the below example of the utilities configuration.
-* **access_token:** GitHub token. This must be generated with suitable access to repositories and users. At a minimum access to read / write the repositories the issues are being migrated to / from and read access to all user profile data. You may want to supply an access token for an admin user (as in the above example) so that all comments are associated to this user.  
+* **access_token:** GitHub token. This must be generated with suitable access to repositories and users. At a minimum, access to read / write the repositories the issues are being migrated to / from and read access to all user profile data. You may want to supply an access token for an admin user (as in the below example) so that all comments are associated to this user.  
 * **from_owner:** The organisation / user that owns the repo to be read from 
 * **from_repo:** The repository that the issues are to be read from
 * **to_owner:** The organisation / user that owns the repo the issues are being written to
@@ -47,3 +45,7 @@ Issues:
   issues: [125, 234, 123]
 
 ~~~
+
+## Example output
+
+ ![**Example of the new issues created**](images/example.png)
