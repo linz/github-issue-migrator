@@ -50,7 +50,7 @@ class Issue(object):
             Originally opened as {4}      
                     
 ----
-<br>        
+       
 {5}
             
             '''.format(self.creator_url, 
@@ -88,7 +88,7 @@ class Comment(object):
             <br>       
                 
 ----
-<br>           
+           
 {4}            
             '''.format(self.commentor_url, 
                        self.commentor_avatar, 
